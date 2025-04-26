@@ -63,7 +63,7 @@ This system ensures a smooth experience for both shop management and customers b
 ![Customer Memo](image%20view/customer%20Section/5.customer_memo.png)
 
 
-## ..................................................................................
+
 
 
 # 🔧 Management Section
