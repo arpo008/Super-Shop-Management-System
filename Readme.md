@@ -54,7 +54,7 @@ This system ensures a smooth experience for both shop management and customers b
 
 ## 🖼️ Image Preview
 
-### 🛍️ Customer Section
+# 🛍️ Customer Section
 
 ![Start](image%20view/customer%20Section/1.start.png)
 ![Customer Signup](image%20view/customer%20Section/2.customer_signup.png)
@@ -62,7 +62,11 @@ This system ensures a smooth experience for both shop management and customers b
 ![Customer Dashboard](image%20view/customer%20Section/4.customer_dashboard.png)
 ![Customer Memo](image%20view/customer%20Section/5.customer_memo.png)
 
-### 🔧 Management Section
+
+## ..................................................................................
+
+
+# 🔧 Management Section
 
 ![Management Side](image%20view/Management%20Section/1.Management_Side.png)
 ![Admin Panel](image%20view/Management%20Section/3.Admin.png)
