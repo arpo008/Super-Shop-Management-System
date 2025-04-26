@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Users</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.5/dist/full.css" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-purple-100 via-pink-50 to-yellow-100 min-h-screen">
+
+    <!-- Navbar -->
+    <div class="navbar bg-white rounded-2xl shadow-md m-4 p-3">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+                    </svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content bg-white rounded-box mt-3 w-52 p-2 shadow-lg">
+                    <li><a href="getall_user.html">All Users</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="navbar-center">
+            <a href="#" class="text-2xl md:text-3xl font-extrabold text-gray-700">Enterprise Resource Management System</a>
+        </div>
+        <div class="navbar-end">
+            <button class="btn bg-gradient-to-r from-red-400 to-red-600 text-white hover:from-red-500 hover:to-red-700 mr-5" onclick="logout()">Log Out</button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto p-6">
+        <h1 class="text-4xl font-bold text-center mb-10 text-gray-800">Toggle Users</h1>
+
+        <div id="loading" class="text-center text-lg text-gray-600 animate-pulse">Loading user data...</div>
+
+        <div id="userTableContainer" class="overflow-x-auto hidden">
+            <div class="bg-white rounded-2xl shadow-lg p-6">
+                <table class="table table-zebra w-full">
+                    <thead class="bg-gray-100">
+                        <tr>
+                            <th class="text-center">User ID</th>
+                            <th class="text-center">First Name</th>
+                            <th class="text-center">Last Name</th>
+                            <th class="text-center">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="userTableBody">
+                        <!-- Dynamic user data -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="errorMessage" class="text-center text-red-500 font-semibold hidden mt-6">
+            Failed to load user data. Please try again later.
+        </div>
+    </div>
+
+    <script src="delete_user.js"></script>
+    <script src="logout.js"></script>
+</body>
+</html>

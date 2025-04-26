@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Product</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+    <!-- DaisyUI -->
+    <style>
+        html, body {
+            height: 100%; /* Ensure body and html take up full viewport height */
+        }
+    </style>
+</head>
+
+<body class="bg-gradient-to-br from-purple-100 via-pink-50 to-yellow-100   ">
+
+    <section>
+       
+        <div class="navbar bg-base-100 h-24 bg-slate-200  rounded-lg shadow-lg">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box mt-3 w-52 p-2 shadow">
+                        <li><a>Homepage</a></li>
+                        <li><a>Portfolio</a></li>
+                        <li><a>About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navbar-center">
+                <a href="" class="btn btn-ghost text-2xl font-bold">Enterprise Resource Management System</a>
+            </div>
+            <div class="navbar-end">
+                <div>
+                    <button class="btn mr-5" onclick="goBack()">Back</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="items-center  justify-center mt-32">
+    <div class="w-full m-auto mt-20 justify-center items-center  max-w-md bg-white shadow-lg rounded-lg p-6  ">
+        <h1 class="text-2xl font-bold text-center mb-6">Update Product</h1>
+        <form id="updateForm" class="space-y-4">
+            <!-- Product ID -->
+            <div>
+                <label for="id" class="block text-sm font-medium text-gray-700">Product ID</label>
+                <input type="number" id="id" required
+                    class="input input-bordered w-full mt-1 text-gray-800" placeholder="Enter Product ID">
+            </div>
+
+            <!-- Category -->
+            <div>
+                <label for="category" class="block text-sm font-medium text-gray-700">Category</label>
+                <select id="category" required
+                    class="select select-bordered w-full mt-1 text-gray-800">
+                    <option value="Halal Meat">Halal Meat</option>
+                    <option value="Hardware">Hardware</option>
+                    <option value="Software">Software</option>
+                    <option value="Haram Meat">Haram Meat</option>
+                    <option value="Grocery Product">Grocery Product</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <!-- Name -->
+            <div>
+                <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                <input type="text" id="name" required
+                    class="input input-bordered w-full mt-1 text-gray-800" placeholder="Enter Product Name">
+            </div>
+
+            <!-- Price -->
+            <div>
+                <label for="price" class="block text-sm font-medium text-gray-700">Price</label>
+                <input type="number" id="price" required
+                    class="input input-bordered w-full mt-1 text-gray-800" placeholder="Enter Product Price">
+            </div>
+
+            <!-- Quantity -->
+            <div>
+                <label for="quantity" class="block text-sm font-medium text-gray-700">Quantity</label>
+                <input type="number" id="quantity" required
+                    class="input input-bordered w-full mt-1 text-gray-800" placeholder="Enter Product Quantity">
+            </div>
+
+            <!-- Submit Button -->
+            <div class="text-center">
+                <button type="submit"
+                    class="btn btn-primary w-full bg-blue-500 hover:bg-blue-600 text-white font-medium">
+                   Update Product
+                </button>
+            </div>
+        </form>
+    </div>
+
+        
+    </form>
+
+</div>
+    <script src="update.js"></script>
+</body>
+
+</html>

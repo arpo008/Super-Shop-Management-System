@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <style>
+        html, body {
+            height: 100%; /* Ensure body and html take up full viewport height */
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-purple-100 via-pink-50 to-yellow-100">
+
+    <!-- Navbar -->
+    <section>
+        <div class="navbar bg-base-100 h-24 bg-slate-200 rounded-lg shadow-xl">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box mt-3 w-52 p-2 shadow-xl">
+                        <li><a>Homepage</a></li>
+                        <li><a>Portfolio</a></li>
+                        <li><a>About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navbar-center">
+                <a href="#" class="btn btn-ghost text-2xl font-semibold text-gray-800">Enterprise Resource Management System</a>
+            </div>
+            <div class="navbar-end">
+                <div>
+                    <button class="btn btn-secondary mr-5" onclick="goBack()">Back</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Date Picker and Graph Section -->
+    <div class="w-10/12 mx-auto mt-10 p-6 bg-white rounded-lg shadow-lg">
+        <h1 class="text-4xl font-bold text-center text-gray-800 mb-6">GRAPH CHART</h1>
+
+        <div class="flex justify-between border-b border-gray-200 pb-3">
+            <dl>
+                <dt class="text-base font-normal text-gray-500 pb-1">Graph Chart</dt>
+                <dd class="leading-none text-3xl font-bold text-gray-900"></dd>
+            </dl>
+            <div>
+                <span class="bg-green-100 text-green-800 text-xs font-medium inline-flex items-center px-2.5 py-1 rounded-md">
+                    <svg class="w-2.5 h-2.5 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13V1m0 0L1 5m4-4 4 4"/>
+                    </svg>
+                </span>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 py-3">
+            <dl>
+                <dt class="text-base font-normal text-gray-500 pb-1"></dt>
+                <dd class="leading-none text-xl font-bold text-green-500"></dd>
+            </dl>
+            <dl>
+                <dt class="text-base font-normal text-gray-500 pb-1"></dt>
+                <dd class="leading-none text-xl font-bold text-red-600"></dd>
+            </dl>
+        </div>
+
+        <!-- Date Range Inputs -->
+        <div class="flex justify-between items-center pt-5">
+            <input type="date" id="startDate" class="p-2 border rounded" />
+            <input type="date" id="endDate" class="p-2 border rounded" />
+            <button id="getGraphBtn" class="px-4 py-2 bg-green-300 text-black rounded hover:bg-green-500">Get Graph</button>
+        </div>
+
+        <!-- Graph will be displayed here -->
+        <div id="bar-chart" class="mt-6"></div>
+    </div>
+
+    <!-- JS File -->
+    <script src="graph.js"></script>
+</body>
+</html>

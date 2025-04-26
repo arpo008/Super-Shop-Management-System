@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Report</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+    html, body {
+        height: 100%; /* Ensure body and html take up full viewport height */
+    }
+</style>
+</head>
+<body class="bg-gradient-to-br from-purple-100 via-pink-50 to-yellow-100 ">
+
+    <div class="navbar bg-base-100 h-24 bg-slate-200  rounded-lg shadow-lg">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+                    </svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box mt-3 w-52 p-2 shadow">
+                    <li><a>Homepage</a></li>
+                    <li><a>Portfolio</a></li>
+                    <li><a>About</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="navbar-center">
+            <a href="" class="btn btn-ghost text-2xl font-bold">Enterprise Resource Management System</a>
+        </div>
+        <div class="navbar-end">
+            
+            <button class="btn bg-yellow-200 mr-5">Back
+                
+            </button>
+        </div>
+    </div>
+
+
+
+    <div class=" flex items-center justify-center mt-32">
+    <div class="max-w-lg w-full bg-white rounded-lg p-8 shadow-2xl">
+        <h1 class="text-3xl font-bold text-gray-800 text-center mb-8">Submit Performance Report</h1>
+        <form id="performanceForm" class="space-y-6">
+            <div>
+                <label for="employeeId" class="block text-sm font-medium text-gray-700">Employee ID</label>
+                <input type="number" id="employeeId" class="input input-bordered w-full mt-1 px-4 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent" placeholder="Enter Employee ID" required>
+            </div>
+            <div>
+                <label for="score" class="block text-sm font-medium text-gray-700">Score (0-100)</label>
+                <input type="number" id="score" class="input input-bordered w-full mt-1 px-4 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent" placeholder="Enter Score" required>
+            </div>
+            <div>
+                <label for="comments" class="block text-sm font-medium text-gray-700">Comments</label>
+                <textarea id="comments" class="textarea textarea-bordered w-full mt-1 px-4 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent" placeholder="Enter Comments" required></textarea>
+            </div>
+            <div class="flex justify-between items-center">
+                <button type="button" onclick="window.location.href='Admin.html'" class="btn bg-gray-200 text-gray-700 hover:bg-gray-300 px-6 py-2 rounded-lg shadow-md">Back</button>
+                <button type="submit" class="btn bg-gradient-to-r from-gray-300 to-yellow-300 text-gray-600 hover:bg-red-500 px-6 py-2 rounded-lg shadow-md">Submit Report</button>
+            </div>
+        </form>
+    </div>
+</div>
+    <script src="performance.js"></script>
+</body>
+</html>

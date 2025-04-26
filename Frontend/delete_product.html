@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Product</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-gray-300 to-yellow-300">
+    <section>
+        <div class="navbar bg-base-100 h-[100px] bg-slate-200 m-3 rounded-lg">
+            <div class="navbar-start">
+                <a href="index.html" class="btn btn-ghost text-3xl font-bold">Enterprise Resource Management System</a>
+            </div>
+            <div class="navbar-end">
+                <button class="btn mr-5" onclick="logout()">Log Out</button>
+            </div>
+        </div>
+    </section>
+    <section class="p-6">
+        <h1 class="text-3xl font-bold text-center text-red-600">Delete Product</h1>
+        <div id="loading" class="text-center text-gray-700 hidden">Loading products...</div>
+        <div id="errorMessage" class="text-center text-red-600 hidden"></div>
+        <div id="productTableContainer" class="hidden mt-6">
+            <table class="table w-full bg-white shadow-md rounded-lg">
+                <thead>
+                    <tr class="bg-gray-300">
+                        <th class="text-center">ID</th>
+                        <th class="text-center">Name</th>
+                        <th class="text-center">Price</th>
+                        <th class="text-center">Category</th>
+                        <th class="text-center">Stock</th>
+                        <th class="text-center">Created</th>
+                        <th class="text-center">Updated</th>
+                        <th class="text-center">Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="productTableBody"></tbody>
+            </table>
+        </div>
+    </section>
+    <script src="delete_product.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find User</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.5/dist/full.css" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%; 
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-purple-100 via-pink-50 to-yellow-100  ">
+    <div class="navbar bg-base-100 h-24 bg-slate-200  rounded-lg shadow-xl">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+                    </svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box mt-3 w-52 p-2 shadow-xl">
+                    <li><a href="getall_user.html">All Users</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="navbar-center">
+            <a href="" class="btn btn-ghost text-2xl font-semibold text-gray-800">Enterprise Resource Management System</a>
+        </div>
+        <div class="navbar-end">
+            <div>
+                <button class="btn btn-secondary mr-5" onclick="window.location.href='Admin.html'">Back</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="flex justify-center items-center mt-32">
+    <div class="p-6 bg-white shadow-md rounded-lg w-full max-w-md">
+        
+        <h2 class="text-xl font-semibold mb-4 text-center">Assign Task</h2>
+        
+        <!-- Role Dropdown -->
+        <div class="mb-4">
+            <label class="block text-sm font-medium text-gray-700 mb-2" for="role">Role</label>
+            <div class="dropdown">
+                <label tabindex="0" class="btn btn-outline w-full text-left">
+                    <span>Select a Role</span>
+                    <svg class="w-5 h-5 ml-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </label>
+                <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-white rounded-box w-full">
+                    <li><a>Seller</a></li>
+                    <li><a>Shop Manager</a></li>
+                    <li><a>HR Manager</a></li>
+                    <li><a>Product Manager</a></li>
+                    <li><a>Guard</a></li>
+                    <li><a>Cleaner</a></li>
+                    <li><a>Worker</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Task Area -->
+        <div class="mb-4">
+            <label class="block text-sm font-medium text-gray-700 mb-2" for="taskArea">Task Area</label>
+            <textarea id="taskArea" class="textarea textarea-bordered w-full" rows="4" placeholder="Describe the task..."></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button id="assignButton" class="btn btn-primary w-full">Assign Task</button>
+    </div>
+</div>
+    <!-- Include Task.js -->
+    <script src="Task.js"></script>
+</body>
+</html>

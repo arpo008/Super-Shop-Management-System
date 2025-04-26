@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html, body {
+      height: 100%;
+    }
+  </style>
+</head>
+
+
+<body class="bg-gradient-to-br from-purple-100 via-pink-50 to-yellow-100  ">
+
+<!-- Navbar -->
+<header class="navbar bg-white shadow-md px-6 h-20">
+  <div class="navbar-start">
+    <div class="dropdown">
+      <button tabindex="0" role="button" class="btn btn-ghost btn-circle">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+        </svg>
+      </button>
+      <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+        <li><a href="index.html" >Homepage</a></li>
+        <li><a>Portfolio</a></li>
+        <li><a>About</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="navbar-center">
+    <h1 class="text-2xl font-bold text-yellow-700">Enterprise Resource Management</h1>
+  </div>
+  <div class="navbar-end">
+    <button class="btn bg-gradient-to-br from-purple-100 via-pink-50 to-yellow-500 hover:bg-green-500" onclick="logout()">Log Out</button>
+  </div>
+</header>
+
+<!-- Main Content -->
+<div class="flex-1 flex flex-col md:flex-row p-4 gap-4">
+
+  <!-- Sidebar -->
+  <aside class="w-full md:w-64 bg-white rounded-xl shadow p-4 flex flex-col items-center">
+    <h2 class="text-2xl font-bold text-red-600 mb-4">Admin Panel</h2>
+    <ul class="space-y-4 w-full">
+      <li>
+        <a href="Admin.html" class="btn btn-success w-full">Admin Home</a>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- Cards Grid -->
+  <div class="flex-1 grid grid-cols-5  gap-3">
+
+    <!-- Card Examples -->
+    <div class="card bg-white shadow-xl hover:shadow-2xl transition rounded-xl">
+      <figure><img src="../Resources/add.png" alt="Add Product" class="h-48 w-full object-contain"></figure>
+      <div class="card-body">
+        <h2 class="card-title">Add Product</h2>
+        <button class="btn btn-success w-full" onclick="window.location.href='add_product.html'">Add</button>
+      </div>
+    </div>
+
+    <div class="card bg-white shadow-xl hover:shadow-2xl transition rounded-xl">
+      <figure><img src="../Resources/delete.jpg" alt="Delete Product" class="h-48 w-full object-contain"></figure>
+      <div class="card-body">
+        <h2 class="card-title">Toggle</h2>
+        <button class="btn btn-error w-full" onclick="window.location.href='delete_user.html'">Delete</button>
+      </div>
+    </div>
+
+    <div class="card bg-white shadow-xl hover:shadow-2xl transition rounded-xl">
+      <figure><img src="../Resources/update.png" alt="Update" class="h-48 w-full object-contain"></figure>
+      <div class="card-body">
+        <h2 class="card-title">Update</h2>
+        <button class="btn btn-warning w-full" onclick="window.location.href='update.html'">Update</button>
+      </div>
+    </div>
+
+    <div class="card bg-white shadow-xl hover:shadow-2xl transition rounded-xl">
+      <figure><img src="../Resources/graph.png" alt="Graph" class="h-48 w-full object-contain"></figure>
+      <div class="card-body">
+        <h2 class="card-title">All Sales Chart</h2>
+        <button class="btn btn-info w-full" onclick="window.location.href='graph.html'">See Graph</button>
+      </div>
+    </div>
+
+    <div class="card bg-white shadow-xl hover:shadow-2xl transition rounded-xl">
+      <figure><img src="../Resources/product_sales.png" alt="Product Sales" class="h-48 w-full object-contain"></figure>
+      <div class="card-body">
+        <h2 class="card-title">Product Sales Chart</h2>
+        <button class="btn btn-info w-full" onclick="window.location.href='graph_product.html'">See Graph</button>
+      </div>
+    </div>
+
+    <div class="card bg-white shadow-xl hover:shadow-2xl transition rounded-xl">
+      <figure><img src="../Resources/add employee.png" alt="Assign Employee" class="h-48 w-full object-contain"></figure>
+      <div class="card-body">
+        <h2 class="card-title">Assign Employee</h2>
+        <button class="btn btn-primary w-full" onclick="window.location.href='add_user.html'">Assign</button>
+      </div>
+    </div>
+
+    <div class="card bg-white shadow-xl hover:shadow-2xl transition rounded-xl">
+      <figure><img src="../Resources/increment.png" alt="Increment Salary" class="h-48 w-full object-contain"></figure>
+      <div class="card-body">
+        <h2 class="card-title">Increment Salary</h2>
+        <button class="btn btn-secondary w-full" onclick="window.location.href='increment_salary.html'">Increment</button>
+      </div>
+    </div>
+
+    <div class="card bg-white shadow-xl hover:shadow-2xl transition rounded-xl">
+      <figure><img src="../Resources/e_search.jpg" alt="Search Employee" class="h-48 w-full object-contain"></figure>
+      <div class="card-body">
+        <h2 class="card-title">Search Employee</h2>
+        <button class="btn btn-primary w-full" onclick="window.location.href='find_user.html'">Search</button>
+      </div>
+    </div>
+
+    <div class="card bg-white shadow-xl hover:shadow-2xl transition rounded-xl">
+      <figure><img src="../Resources/Employee.jpg" alt="Employee List" class="h-48 w-full object-contain"></figure>
+      <div class="card-body">
+        <h2 class="card-title">Employee List</h2>
+        <button class="btn btn-primary w-full" onclick="window.location.href='getall_user.html'">View</button>
+      </div>
+    </div>
+
+    <div class="card bg-white shadow-xl hover:shadow-2xl transition rounded-xl">
+      <figure><img src="../Resources/attendance.jpg" alt="Attendance" class="h-48 w-full object-contain"></figure>
+      <div class="card-body">
+        <h2 class="card-title">Check Attendance</h2>
+        <button class="btn btn-primary w-full" onclick="window.location.href='attendance_search.html'">View</button>
+      </div>
+    </div>
+
+    <div class="card bg-white shadow-xl hover:shadow-2xl transition rounded-xl">
+      <figure><img src="../Resources/all_product.png" alt="All Product" class="h-48 w-full object-contain"></figure>
+      <div class="card-body">
+        <h2 class="card-title">All Product</h2>
+        <button class="btn btn-primary w-full" onclick="window.location.href='getall_product.html'">View</button>
+      </div>
+    </div>
+
+    <div class="card bg-white shadow-xl hover:shadow-2xl transition rounded-xl">
+      <figure><img src="../Resources/feedback.png" alt="Send Feedback" class="h-48 w-full object-contain"></figure>
+      <div class="card-body">
+        <h2 class="card-title">Send Feedback</h2>
+        <button class="btn btn-primary w-full" onclick="window.location.href='performance.html'">Send</button>
+      </div>
+    </div>
+
+    <div class="card bg-white shadow-xl hover:shadow-2xl transition rounded-xl">
+      <figure><img src="../Resources/report.png" alt="Send Feedback" class="h-48 w-full object-contain"></figure>
+      <div class="card-body">
+        <h2 class="card-title">See Report</h2>
+        <button class="btn btn-primary w-full" onclick="window.location.href='report_search.html'">Send</button>
+      </div>
+    </div>
+
+</div>
+</div>
+
+<script src="logout.js"></script>
+</body>
+</html>

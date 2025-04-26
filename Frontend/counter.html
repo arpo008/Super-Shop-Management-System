@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Management</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-purple-100 via-pink-50 to-yellow-100 min-h-screen">
+
+  <!-- Navbar -->
+  <div class="navbar bg-base-100 h-[100px] bg-white m-3 rounded-2xl shadow-xl">
+    <div class="navbar-start">
+      <div class="dropdown">
+        <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+          </svg>
+        </div>
+        <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow-lg">
+          <li><a>Homepage</a></li>
+          <li><a>Portfolio</a></li>
+          <li><a>About</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="navbar-center">
+      <a href="#" class="btn btn-ghost text-3xl font-extrabold text-gray-700">Enterprise Resource Management System</a>
+    </div>
+    <div class="navbar-end">
+      <button class="btn bg-gradient-to-r from-red-400 to-red-600 text-white mr-5" onclick="logout()">Log Out</button>
+    </div>
+  </div>
+
+  <!-- Spinner -->
+  <div id="spinner" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center hidden z-50">
+    <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-white"></div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="flex flex-wrap gap-6 p-6">
+    <!-- Product Container -->
+    <div class="w-full md:w-3/4">
+      <h1 class="text-4xl font-extrabold mb-8 text-gray-800">Product List</h1>
+
+      <!-- Category Buttons -->
+      <div class="flex flex-wrap gap-4 mb-10">
+        <button onclick="filterProductsByCategory('All')" class="btn bg-gradient-to-r from-yellow-300 to-pink-300 hover:from-pink-400 hover:to-yellow-400 text-black font-bold">All</button>
+        <button onclick="filterProductsByCategory('Grocery Product')" class="btn bg-gradient-to-r from-yellow-300 to-pink-300 hover:from-pink-400 hover:to-yellow-400 text-black font-bold">Grocery Product</button>
+        <button onclick="filterProductsByCategory('Halal Meat')" class="btn bg-gradient-to-r from-yellow-300 to-pink-300 hover:from-pink-400 hover:to-yellow-400 text-black font-bold">Halal Meat</button>
+        <button onclick="filterProductsByCategory('Haram Meat')" class="btn bg-gradient-to-r from-yellow-300 to-pink-300 hover:from-pink-400 hover:to-yellow-400 text-black font-bold">Haram Meat</button>
+        <button onclick="filterProductsByCategory('Hardware')" class="btn bg-gradient-to-r from-yellow-300 to-pink-300 hover:from-pink-400 hover:to-yellow-400 text-black font-bold">Hardware</button>
+        <button onclick="filterProductsByCategory('Software')" class="btn bg-gradient-to-r from-yellow-300 to-pink-300 hover:from-pink-400 hover:to-yellow-400 text-black font-bold">Software</button>
+        <button onclick="filterProductsByCategory('Other')" class="btn bg-gradient-to-r from-yellow-300 to-pink-300 hover:from-pink-400 hover:to-yellow-400 text-black font-bold">Other</button>
+      </div>
+
+      <!-- Product Grid -->
+      <div id="product-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6"></div>
+    </div>
+
+    <!-- Cart Section -->
+    <div class="w-full md:w-[350px] bg-white rounded-2xl shadow-xl p-6 flex flex-col gap-6 fixed right-6 top-[120px] max-h-[85vh] overflow-y-auto">
+      <h2 class="text-2xl font-bold text-gray-700 text-center">🛒 Your Cart</h2>
+
+      <div class="grid grid-cols-2 font-semibold text-lg mb-4">
+        <span>Product Name</span>
+        <span class="text-right">Price</span>
+      </div>
+
+      <div id="cart-items" class="flex flex-col gap-3 p-2"></div>
+
+      <div id="total-price" class="text-xl font-semibold text-gray-800 text-center"></div>
+
+      <!-- Bag Selection -->
+      <div class="flex flex-col">
+        <label for="bag-selection" class="mb-2 font-bold text-lg">Choose a Bag:</label>
+        <select id="bag-selection" class="select select-bordered w-full max-w-xs" onchange="handleBagSelection(this.value)">
+            <option value="NoBag">No Bag</option>
+            <option value="ClothBag">Cloth Bag</option>
+            <option value="PlasticBag">Plastic Bag</option>
+            <option value="Trolley">Trolley</option>
+        </select>
+    </div>
+
+      <!-- Purchase Button -->
+      <button class="btn bg-gradient-to-r from-blue-400 to-indigo-600 hover:from-indigo-500 hover:to-blue-700 text-white font-bold w-full mt-6" onclick="purchase()">Purchase</button>
+    </div>
+  </div>
+
+  <script src="counter.js"></script>
+  <script src="buy_bag.js"></script>
+  <script src="logout.js"></script>
+</body>
+</html>

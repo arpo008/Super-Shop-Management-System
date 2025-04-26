@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Purchase Memo</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html, body {
+      height: 100%;
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-r from-[#f0f4f8] to-[#d9e2ec] ">
+
+ 
+  <header class="navbar bg-white shadow-md px-6 h-20">
+    <div class="navbar-start">
+      <div class="dropdown">
+        <button tabindex="0" role="button" class="btn btn-ghost btn-circle">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+          </svg>
+        </button>
+        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+          <li><a href="index.html" >Homepage</a></li>
+          <li><a>Portfolio</a></li>
+          <li><a>About</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="navbar-center">
+      <h1 class="text-2xl font-bold text-yellow-700">Enterprise Resource Management</h1>
+    </div>
+    <div class="navbar-end">
+      <button class="btn bg-gradient-to-br from-purple-100 via-pink-50 to-yellow-500 hover:bg-green-500" onclick="logout()">Log Out</button>
+    </div>
+  </header>
+
+
+
+  <div class="mt-10 flex flex-col">
+  <div class="flex justify-center ">
+    <h1 class="text-2xl md:text-3xl font-bold text-gray-800 tracking-wide">🛒 Purchase Memo</h1>
+  </div>
+
+  <!-- Main Content -->
+  <main class="flex-grow flex flex-col gap-6 px-6 py-6 overflow-y-auto">
+
+    <!-- Seller Info Card -->
+    <section id="seller-info" class="bg-white shadow-xl rounded-3xl border border-teal-400 p-6">
+      <h2 class="text-xl md:text-2xl font-semibold text-teal-700 mb-4 border-b pb-2">Seller Information</h2>
+      <!-- Seller details will render here -->
+    </section>
+
+    <!-- Purchase Details Card -->
+    <section class="bg-white shadow-xl rounded-3xl border border-teal-400 p-6 flex-grow max-h-[250px] overflow-y-auto">
+      <h2 class="text-xl md:text-2xl font-semibold text-teal-700 mb-6 border-b pb-2">Purchase Details</h2>
+
+      <div id="product-list" class="space-y-6">
+        <!-- Products details will render here -->
+      </div>
+    </section>
+
+    <!-- Go Back Button -->
+    <div class="flex justify-center py-6">
+      <button onclick="goBack()" class="btn btn-wide bg-gradient-to-r from-teal-500 to-cyan-500 text-white text-lg font-semibold rounded-full shadow-md hover:from-teal-600 hover:to-cyan-600">
+        Go Back
+      </button>
+    </div>
+
+  </main>
+</div>
+  <script src="memo.js"></script>
+</body>
+</html>

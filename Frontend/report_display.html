@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Report Display</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html, body {
+            height: 100%; /* Ensure body and html take up full viewport height */
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-purple-100 via-pink-50 to-yellow-100  min-h-screen">
+    <div class="navbar bg-base-100 h-24 bg-slate-200 m-3 rounded-lg shadow-lg">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+                    </svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box mt-3 w-52 p-2 shadow">
+                    <li><a>Homepage</a></li>
+                    <li><a href="">DashBoard</a></li>
+                    <li><a>About</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="navbar-center">
+            <a href="" class="btn btn-ghost text-2xl font-bold">Enterprise Resource Management System</a>
+        </div>
+        <div class="navbar-end">
+            <div>
+                <button class="btn mr-5" onclick="logout()">Log Out</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mx-auto p-6 pt-40">
+        <h1 class="text-4xl font-bold text-center text-gray-800 mb-6">Employee Report</h1>
+        <div id="reportContainer" class="overflow-x-auto rounded-lg shadow-lg bg-white">
+            <table class="table-auto w-full border-collapse border-b-2 border-gray-300">
+                <thead class="bg-gradient-to-br from-purple-200 via-pink-100 to-yellow-200  font-bold shadow-lg">
+                    <tr>
+                        <th class=" text-center py-2 px-4">Report ID</th>
+                        <th class="text-center py-2 px-4">Reported By</th>
+                        <th class="text-center py-2 px-4">Review Date</th>
+                        <th class="text-center py-2 px-4">Score</th>
+                        <th class="text-center py-2 px-4">Notes</th>
+                    </tr>
+                </thead>
+                <tbody id="reportTableBody" class="bg-gray-50">
+                    <!-- Data will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="report_display.js"></script>
+</body>
+</html>

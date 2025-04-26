@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-gradient-to-br from-gray-200 via-yellow-100 to-pink-100">
+
+    <!-- Navbar -->
+    <section>
+        <div class="m-4">
+            <div class="navbar bg-white rounded-2xl shadow-md p-4">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0" class="menu menu-sm dropdown-content bg-white rounded-box z-10 mt-3 w-52 p-2 shadow-lg">
+                            <li><a>Homepage</a></li>
+                            <li><a>Portfolio</a></li>
+                            <li><a>About</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="navbar-center">
+                    <a href="#" class="text-2xl md:text-3xl font-extrabold text-gray-700">Enterprise Resource Management System</a>
+                </div>
+                <div class="navbar-end">
+                    <button class="btn bg-gradient-to-r from-red-400 to-red-600 text-white hover:from-red-500 hover:to-red-700 mr-5" onclick="logout()">Log Out</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cards Section -->
+    <section>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 m-6">
+            <!-- Card 1 -->
+            <a href="Admin.html" class="card bg-white hover:shadow-2xl rounded-2xl p-6 flex flex-col items-center transition-transform transform hover:scale-105">
+                <i class="fas fa-user-shield text-5xl text-red-500 mb-4"></i>
+                <h2 class="text-xl font-bold text-gray-700">Admin</h2>
+            </a>
+
+            <!-- Card 2 -->
+            <a href="HR_manager.html" class="card bg-white hover:shadow-2xl rounded-2xl p-6 flex flex-col items-center transition-transform transform hover:scale-105">
+                <i class="fas fa-briefcase text-5xl text-indigo-500 mb-4"></i>
+                <h2 class="text-xl font-bold text-gray-700">HR Manager</h2>
+            </a>
+
+            <!-- Card 3 -->
+            <a href="shop Manager.html" class="card bg-white hover:shadow-2xl rounded-2xl p-6 flex flex-col items-center transition-transform transform hover:scale-105">
+                <i class="fas fa-store text-5xl text-green-500 mb-4"></i>
+                <h2 class="text-xl font-bold text-gray-700">Shop Manager</h2>
+            </a>
+
+            <!-- Card 4 -->
+            <a href="product_Manager.html" class="card bg-white hover:shadow-2xl rounded-2xl p-6 flex flex-col items-center transition-transform transform hover:scale-105">
+                <i class="fas fa-box-open text-5xl text-yellow-500 mb-4"></i>
+                <h2 class="text-xl font-bold text-gray-700">Product Manager</h2>
+            </a>
+
+            <!-- Card 5 -->
+            <a href="employee.html" class="card bg-white hover:shadow-2xl rounded-2xl p-6 flex flex-col items-center transition-transform transform hover:scale-105">
+                <i class="fas fa-users text-5xl text-blue-500 mb-4"></i>
+                <h2 class="text-xl font-bold text-gray-700">Employee</h2>
+            </a>
+
+            <!-- Card 6 -->
+            <a href="System_Maintainance.html" class="card bg-white hover:shadow-2xl rounded-2xl p-6 flex flex-col items-center transition-transform transform hover:scale-105">
+                <i class="fas fa-tools text-5xl text-purple-500 mb-4"></i>
+                <h2 class="text-xl font-bold text-gray-700 text-center">System Maintenance & Support</h2>
+            </a>
+        </div>
+    </section>
+
+    <script src="logout.js"></script>
+
+</body>
+</html>

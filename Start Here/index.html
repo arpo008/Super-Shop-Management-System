@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Super Shop - Start</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.css" rel="stylesheet">
+  <style>
+    html, body {
+      height: 100%;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-purple-100 via-pink-200 to-yellow-500 text-gray-800 font-sans flex flex-col min-h-screen">
+    <section class="bg-gradient-to from-blue-600 to-blue-300   ">
+        <div class="navbar bg-base-100 h-24 bg-slate-200  rounded-lg shadow-lg">
+            <div class="navbar-start">
+                <a href=""><img class="w-40" src="../Frontend/Resources/SSMS.png" alt=""></a>
+            </div>
+            <div class="navbar-center">
+                <a href="" class="btn btn-ghost text-2xl font-bold">Super Shop Management System</a>
+            </div>
+            <div class="navbar-end">
+                <button class="btn mr-5" >HI ,BUDDY</button>
+            </div>
+        </div>
+    </section>
+
+
+  <!-- Header -->
+  <header class="text-center py-10 mt-20">
+    <h1 class="text-5xl font-bold text-purple-700 drop-shadow-sm">Welcome to Super Shop</h1>
+    <p class="text-lg mt-2 text-gray-600">Your one-stop destination for everything!</p>
+  </header>
+
+  <!-- Buttons Section -->
+  <div class="flex justify-center gap-10 mt-4">
+    <!-- Customer Side Dropdown -->
+    <div class="dropdown dropdown-hover">
+      <label tabindex="0" class="btn btn-lg bg-purple-600 text-white hover:bg-purple-700">Customer Side</label>
+      <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-40 bg-purple-400">
+        <li><a href="../customer/login.html">Login</a></li>
+        <li><a href="../customer/signup.html">Signup</a></li>
+      </ul>
+    </div>
+
+    <!-- Management Side Button -->
+    <button onclick="window.location.href='../Frontend/index.html'" class="btn btn-lg bg-pink-500 text-white hover:bg-pink-600">
+      Management Side
+    </button>
+  </div>
+
+  <!-- Features Section -->
+  <section class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto mt-24 px-6">
+    <div class="bg-white shadow-xl rounded-lg p-6 transition transform hover:-translate-y-2 hover:shadow-2xl">
+      <h3 class="text-xl font-semibold text-purple-700 mb-2">Fast Delivery</h3>
+      <p>Get your products delivered to your doorstep in no time.</p>
+    </div>
+    <div class="bg-white shadow-xl rounded-lg p-6 transition transform hover:-translate-y-2 hover:shadow-2xl">
+      <h3 class="text-xl font-semibold text-purple-700 mb-2">Quality Products</h3>
+      <p>Only the best products sourced directly from trusted suppliers.</p>
+    </div>
+    <div class="bg-white shadow-xl rounded-lg p-6 transition transform hover:-translate-y-2 hover:shadow-2xl">
+      <h3 class="text-xl font-semibold text-purple-700 mb-2">24/7 Support</h3>
+      <p>Reach out to our support team anytime, anywhere.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="    mt-auto bg-white shadow-inner p-10 grid grid-cols-1 md:grid-cols-3  text-sm text-gray-700">
+    <!-- Column 1 -->
+    
+    <div class=" mx-32">
+      <h4 class="font-bold text-lg mb-2">Customer Care</h4>
+      <ul class="space-y-1">
+        <li>Help Center</li>
+        <li>How to Buy</li>
+        <li>Returns & Refunds</li>
+        <li>Contact Us</li>
+        <li>Terms & Conditions</li>
+        <li>CCMS - Central Complain Management System</li>
+      </ul>
+    </div>
+
+    <!-- Column 2 -->
+    <div class=" ml-32">
+      <h4 class="font-bold text-lg mb-2">Connect With Us</h4>
+      <div class="flex space-x-4 text-2xl text-purple-600">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="">
+      <h4 class="font-bold text-lg mb-2">Our Branches</h4>
+      <ul class="space-y-1">
+        <li>Super Shop ,Chohatta,Sylhet</li>
+        <li>Super Shop,Khilkhet,Dhaka</li>
+        <li>Super SHop,Mymensingh</li>
+        <li>Super Shop,Dholfin Chottor,Chattogram</li>
+        <li>Super Shop,Shaheb Bazar,Rajshahi</li>
+      </ul>
+    </div>
+
+  </footer>
+
+</body>
+</html>

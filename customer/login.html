@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Customer Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+</head>
+
+<style>
+  html, body {
+    height: 100%;
+  }
+</style>
+
+<body class="bg-gradient-to-br from-purple-100 via-pink-50 to-yellow-100 h-full">
+ 
+  <section class="bg-gradient-to from-blue-600 to-blue-300  mt-0 ">
+    <div class="navbar bg-base-100 h-24 bg-slate-200 m-3 rounded-lg shadow-lg">
+        <div class="navbar-start">
+            <a href=""><img class="w-40" src="../Frontend/Resources/SSMS.png" alt=""></a>
+        </div>
+        <div class="navbar-center">
+            <a href="" class="btn btn-ghost text-2xl font-bold">Super Shop Management System</a>
+        </div>
+        <div class="navbar-end">
+            <button class="btn mr-5" onclick="logout()">Log Out</button>
+        </div>
+    </div>
+</section>
+<div class=" flex justify-center mt-48">
+  <div class="card shadow-2xl bg-white/80 backdrop-blur-lg border border-purple-200 w-full max-w-md p-8">
+    <h2 class="text-3xl font-bold text-center text-purple-700 mb-6">Customer Login</h2>
+
+    <form id="loginForm" class="space-y-4">
+      <input type="text" name="email" placeholder="Email" required class="input input-bordered w-full" />
+      <input type="password" name="password" placeholder="Password" required class="input input-bordered w-full" />
+
+      <button type="submit" class="btn btn-primary w-full bg-purple-600 hover:bg-purple-700 text-white">
+        Login
+      </button>
+    </form>
+
+    <p class="text-center text-sm mt-6 text-gray-700">
+      Don’t have an account?
+      <a href="signup.html" class="text-purple-600 font-semibold hover:underline">Signup</a>
+    </p>
+  </div>
+</div>
+
+  <script src="login.js"></script>
+</body>
+</html>

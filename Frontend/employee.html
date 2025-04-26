@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Panel</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-purple-100 via-pink-50 to-yellow-100 min-h-screen">
+
+    <!-- Navbar -->
+    <section>
+        <div class="navbar bg-white rounded-2xl shadow-md m-4 p-4">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content bg-white rounded-box z-[1] mt-3 w-52 p-2 shadow-lg">
+                        <li><a href="#">Homepage</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navbar-center">
+                <a href="#" class="text-3xl font-bold text-gray-700">Enterprise Resource Management System</a>
+            </div>
+            <div class="navbar-end">
+                <button class="btn bg-gradient-to-r from-red-400 to-red-600 text-white hover:from-red-500 hover:to-red-700 mr-5" onclick="logout()">Log Out</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section>
+        <div class="flex flex-col md:flex-row w-full h-full p-4 gap-4">
+            <!-- Sidebar -->
+            <div class="w-full md:w-[300px] bg-white rounded-lg shadow-lg p-6">
+                <h1 class="text-2xl font-bold text-red-600 mb-6">Employee Panel</h1>
+                <ul class="space-y-4">
+                    <li>
+                        <a href="employee.html" class="block text-xl font-semibold bg-orange-300 hover:bg-green-200 text-white  rounded-full px-4 py-2 text-center">
+                            Employee
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Cards Section -->
+            <div class="flex-1">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Card 1 -->
+                    <div class="card card-compact bg-white shadow-lg rounded-lg hover:shadow-xl transition transform hover:scale-105 duration-300">
+                        <figure class="overflow-hidden rounded-t-lg">
+                            <img src="../Resources/payment_option.jpg" alt="Counter" class="w-full h-48 object-cover">
+                        </figure>
+                        <div class="card-body p-6">
+                            <h2 class="card-title text-xl font-semibold text-gray-800 mb-4">Counter</h2>
+                            <p class="text-gray-600 mb-4">Manage payments and counters efficiently with this module.</p>
+                            <div class="flex justify-end">
+                                <button class=" w-28 btn bg-gradient-to-r from-blue-500 to-blue-700 text-white hover:from-blue-600 hover:to-blue-800 transition duration-300 py-2 px-4 rounded-lg" onclick="window.location='counter.html'">
+                                    Go
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    
+                    <!-- Card 3 (Add more cards as needed) -->
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WebSocket Script -->
+    <script>
+        const ws = new WebSocket('ws://localhost:3000'); // Change to your server
+
+        const userId = 'user12';  // Ideally make this dynamic if possible
+        const role = 'Seller';    
+
+        ws.onopen = () => {
+            console.log('Connected to WebSocket server');
+            registerUser(userId, role);
+        };
+
+        function registerUser(userId, role) {
+            const registerMessage = {
+                type: 'register',
+                userId: userId,
+                role: role
+            };
+            console.log('Sending registration message:', registerMessage);
+            ws.send(JSON.stringify(registerMessage));
+        }
+
+        ws.onmessage = (event) => {
+            const message = JSON.parse(event.data);
+            if (message.type === 'message') {
+                alert(`New message: ${message.content}`);
+            }
+        };
+
+        ws.onerror = (error) => {
+            console.error('WebSocket Error:', error);
+        };
+
+        ws.onclose = () => {
+            console.log('WebSocket connection closed');
+        };
+    </script>
+
+    <script src="logout.js"></script>
+</body>
+</html>

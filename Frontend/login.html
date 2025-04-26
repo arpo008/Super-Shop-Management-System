@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find User</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.5/dist/full.css" rel="stylesheet">
+  <!-- Redirect Script -->
+  <script> 
+    function redirectToDashboard(event) { 
+      event.preventDefault();
+      window.location.href = 'dashboard.html';
+    } 
+  </script>
+  <style>
+    html, body {
+        height: 100%; /* Ensure body and html take up full viewport height */
+    }
+</style>
+</head>
+
+<body class="bg-gradient-to-br from-purple-100 via-pink-50 to-yellow-100">
+
+  <div class="navbar bg-base-100 h-24 bg-slate-200  rounded-lg shadow-xl">
+    <div class="navbar-start">
+        <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+                </svg>
+            </div>
+            <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box mt-3 w-52 p-2 shadow-xl">
+                <li><a href="getall_user.html">All Users</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="navbar-center">
+        <a href="" class="btn btn-ghost text-2xl font-bold text-gray-800">Enterprise Resource Management System</a>
+    </div>
+    <div class="navbar-end">
+        <div>
+            <button class="btn btn-secondary mr-5" onclick="window.location.href=''">Back</button>
+        </div>
+    </div>
+</div>
+
+<div class="flex items-center justify-center mt-32 ">
+  <div class="bg-white p-10 md:p-16 rounded-2xl shadow-2xl w-full max-w-md mx-4 text-center">
+    <h1 class="text-5xl font-extrabold mb-10 text-gray-800">LOGIN</h1>
+
+    <form onsubmit="redirectToDashboard(event)" class="space-y-8">
+      
+      <!-- Username Input -->
+      <div>
+        <input type="text" id="user_id" placeholder="Username" 
+               class="input input-bordered w-full h-14 text-xl rounded-lg focus:ring-2 focus:ring-blue-400" required>
+      </div>
+
+      <!-- Password Input -->
+      <div>
+        <input type="password" id="password" placeholder="Password" 
+               class="input input-bordered w-full h-14 text-xl rounded-lg focus:ring-2 focus:ring-blue-400" required>
+      </div>
+
+      <!-- Login Button -->
+      <button type="submit" 
+              class="btn btn-primary w-full h-14 text-xl rounded-lg bg-gradient-to-r from-blue-500 to-purple-600 hover:opacity-90 shadow-lg">
+        LOGIN
+      </button>
+
+      <!-- Forgot Password -->
+      <div class="mt-6">
+        <a href="#" class="link link-primary text-lg hover:underline">Forgot Password?</a>
+      </div>
+
+      <!-- Sign up Link -->
+      <div class="mt-4 text-lg text-gray-700">
+        Don't have an account? <a href="#" class="link link-primary hover:underline">Sign up</a>
+      </div>
+
+    </form>
+  </div>
+</div>
+  <script src="login.js"></script>
+</body>
+</html>

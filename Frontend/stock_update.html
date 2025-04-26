@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Stock</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.5/dist/full.css" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%; 
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-purple-300 via-pink-100 to-yellow-100  min-h-screen">
+    <div class="navbar bg-base-100 h-24 bg-slate-200 rounded-lg shadow-lg">
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
+                    </svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box mt-3 w-52 p-2 shadow">
+                    <li><a href="">Homepage</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="navbar-center">
+            <a href="" class="btn btn-ghost text-2xl font-bold">Enterprise Resource Management System</a>
+        </div>
+        <div class="navbar-end">
+            <div>
+                <button class="btn mr-5" onclick="logout()">Log Out</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mx-auto p-6 pt-10">
+        <h1 class="text-3xl font-bold text-center mb-6">Update Stock</h1>
+        <div id="loading" class="text-center text-lg">Loading product data...</div>
+        <div id="productTableContainer" class="overflow-x-auto hidden">
+            <table class="table table-zebra w-full">
+                <thead>
+                    <tr>
+                        <th class="text-center">Product ID</th>
+                        <th class="text-center">Name</th>
+                        <th class="text-center">Price</th>
+                        <th class="text-center">Category</th>
+                        <th class="text-center">Stock Quantity</th>
+                        <th class="text-center">Update Quantity</th>
+                    </tr>
+                </thead>
+                <tbody id="productTableBody">
+                </tbody>
+            </table>
+        </div>
+        <div id="errorMessage" class="text-center text-red-500 font-bold hidden">Failed to load product data. Please try again later.</div>
+    </div>
+    <script src="stock_update.js"></script>
+</body>
+</html>
