@@ -32,6 +32,12 @@ This system ensures a smooth experience for both shop management and customers b
 - **Frontend**: JavaScript and Tailwind CSS
 
 ---
+##  Team Members
+- **Arpo Roy
+- **Anindita Das Mishi
+
+
+---
 
 ## ⚙️ Installation
 
