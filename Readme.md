@@ -33,8 +33,8 @@ This system ensures a smooth experience for both shop management and customers b
 
 ---
 ##  Team Members
-- **Arpo Roy
-- **Anindita Das Mishi
+- **Arpo Roy**
+- **Anindita Das Mishi**
 
 
 ---
